@@ -1,5 +1,6 @@
 package pages;
 
+import com.google.gson.internal.bind.util.ISO8601Utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,7 +30,10 @@ public class WebOrdersLoginPage {
         this.username.sendKeys(username);
         this.password.sendKeys(password);
         this.loginButton.click();
+        this.loginButton.click();
 
 
     }
+
+
 }
