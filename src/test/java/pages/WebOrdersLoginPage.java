@@ -31,8 +31,6 @@ public class WebOrdersLoginPage {
         this.password.sendKeys(password);
         this.loginButton.click();
 
-
-
     }
 
 
