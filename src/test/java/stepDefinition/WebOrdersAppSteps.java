@@ -19,22 +19,29 @@ public class WebOrdersAppSteps {
         driver.get(CommonUtils.getProperty("WebOrdersURL"));
 
     }
+
     @When("User provides username {string} and password {string}")
     public void user_provides_username_and_password(String username, String password) {
-        webOrdersLoginPage.logIn(username,password);
-    }
-    @Then("User validates that application logged in")
-    public void user_validates_that_application_logged_in() {
-
-        String excpectedTitle = "Web Orders";
-        String actualTitle = driver.getTitle();
-
-        Assert.assertEquals("Actual Title: "+ actualTitle+""+ "Didn`t match with expected Title: "
-                +excpectedTitle,excpectedTitle,actualTitle);
-
+        webOrdersLoginPage.logIn(username, password);
     }
 
+    @Then("User validates that application {string} logged in")
+    public void user_validates_that_application_logged_in(String condition) {
+        if (condition.equalsIgnoreCase("is")) {
+            String excpectedTitle = "Web Orders";
+            String actualTitle = driver.getTitle();
+
+            Assert.assertEquals("Actual Title: " + actualTitle + "" + "Didn`t match with expected Title: "
+                    + excpectedTitle, excpectedTitle, actualTitle);
+
+        }else if (condition.equalsIgnoreCase("is not")){
+            String expectedErrorMessage = "Invalid Login or Password.";
+            String actualErrorMessage = webOrdersLoginPage.errorMessage.getText();
+            Assert.assertEquals(expectedErrorMessage, actualErrorMessage);
+
+        }
+
     }
 
 
-
+}

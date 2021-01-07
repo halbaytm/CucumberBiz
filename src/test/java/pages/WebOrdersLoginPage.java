@@ -26,6 +26,9 @@ public class WebOrdersLoginPage {
     @FindBy(id = "ctl00_MainContent_login_button")
     public WebElement loginButton;
 
+    @FindBy(id = "ctl00_MainContent_status")
+    public WebElement errorMessage;
+
     public void logIn(String username, String password) {
         this.username.sendKeys(username);
         this.password.sendKeys(password);
