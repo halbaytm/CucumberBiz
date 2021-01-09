@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 //                "json:target/cucumber.json",// generate report
 //                "junit:target/cucumber.xml",
 //                "rerun:target/rerun.txt"},
-        features = "src/test/resources/webOrderTest/LoginFunctionality.feature",
+        features = "src/test/resources/webOrderTest",
         glue = "stepDefinition",
         dryRun = false
 )

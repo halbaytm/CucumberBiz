@@ -28,7 +28,7 @@ public class Hooks {
         if (scenario.isFailed()) {
             CommonUtils.takeScreenshot(driver, "Test Scenario");
         }
-        driver.quit();
+       // driver.quit();
 
 
     }
