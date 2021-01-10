@@ -12,6 +12,7 @@ import org.junit.runner.RunWith;
 //                "rerun:target/rerun.txt"},
         features = "src/test/resources/webOrderTest",
         glue = "stepDefinition",
+        tags = "@TEC-2001",
         dryRun = false
 )
 

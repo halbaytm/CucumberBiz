@@ -1,6 +1,7 @@
+@regressiontest @TEC-1002
 Feature: Order Creation Functionality
 
-  @TC-101
+  @TEC-2003 @ui
   Scenario: Creating order with valid data
     Given User navigates to WebOrders application
     When User provides username "Tester" and password "test"
