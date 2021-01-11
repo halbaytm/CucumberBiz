@@ -51,9 +51,9 @@ public class EtsySteps {
 
     @Then("User validates {string} title")
     public void user_validates_title(String string) {
-//        String actualTitle = driver.getTitle();
-//        Assert.assertEquals(expectedTitle, actualTitle);
-//    }
+        String actualTitle = driver.getTitle();
+        Assert.assertEquals(expectedTitle, actualTitle);
+    }
 
 //    @When("User searches for {string}")
 //    public void user_searches_for(String item) {
