@@ -58,7 +58,7 @@ public class EtsySteps {
 //    @When("User searches for {string}")
 //    public void user_searches_for(String item) {
 //        etsyHomePage.searchBox.sendKeys(item + Keys.ENTER);
-//
+
 //    }
 //
 //    @Then("User validates the result contains")
