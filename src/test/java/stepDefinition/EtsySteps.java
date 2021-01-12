@@ -15,6 +15,7 @@ import utilities.Driver;
 import java.util.List;
 
 public class EtsySteps {
+
     WebDriver driver = Driver.getDriver("browser");
     EtsyHomePage etsyHomePage = new EtsyHomePage();
 
@@ -48,6 +49,8 @@ public class EtsySteps {
             etsyHomePage.giftCards.click();
 
     }
+
+
 
     @Then("User validates {string} title")
     public void user_validates_title(String string) {
