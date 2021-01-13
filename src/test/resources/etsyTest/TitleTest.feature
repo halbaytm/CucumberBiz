@@ -10,7 +10,6 @@ Feature: Validating Title for each page
     Then User validates "<title>" title
     Examples:
       | department            | title                         |
-      | Post-Holiday Sales    | Post-holiday sales\| Etsy     |
       | Jewelry & Accessories | Jewelry & Accessories \| Etsy |
       | Clothing & Shoes      | Clothing & Shoes \| Etsy      |
       | Home & Living         | Home & Living \| Etsy         |

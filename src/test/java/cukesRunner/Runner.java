@@ -7,9 +7,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {"html:target/cucumber-html-report", "json:target/cucumber.json"},
-        features = "src/test/resources/etsyTest",
+        features = "src/test/resources",
         glue = "stepDefinition",
-        tags = "@TEC-2004",
+        tags = "@regressiontest",
         dryRun = false
 )
 
