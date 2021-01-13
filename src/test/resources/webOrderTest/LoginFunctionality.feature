@@ -5,7 +5,7 @@ Feature: Testing Log in functionality
   Scenario Outline: Testing log in functionality with valid/invalid credentials
     Given User navigates to WebOrders application
     When User provides username "<username>" and password "<password>"
-    Then User validates that application "condition" logged in
+    Then User validates that application "<condition>" logged in
 
     Examples:
 
