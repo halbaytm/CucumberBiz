@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         plugin = {"html:target/cucumber-html-report", "json:target/cucumber.json"},
         features = "src/test/resources",
         glue = "stepDefinition",
-        tags = "@regressiontest",
+        tags = "@TEC-1010",
         dryRun = false
 )
 
