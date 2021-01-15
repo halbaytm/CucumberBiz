@@ -12,6 +12,7 @@ import pages.WebOrdersHomePage;
 import pages.WebOrdersLoginPage;
 import utilities.CommonUtils;
 import utilities.Driver;
+import utilities.ExcelUtils;
 
 import java.sql.SQLOutput;
 import java.util.List;
@@ -98,6 +99,25 @@ public class WebOrdersAppSteps {
         Assert.assertEquals(data.get(0).get("Card Nr"),webOrdersHomePage.firstRowData.get(10).getText());
         Assert.assertEquals(data.get(0).get("Expire Date"),webOrdersHomePage.firstRowData.get(11).getText());
 
+    }
+    @Then("User validates UI headers with {string} excel file expected result")
+    public void user_validates_ui_headers_with_excel_file_expected_result(String excelFile) {
+        ExcelUtils.openExcelFile(excelFile, "Sheet1");
+        String expectedResult = ExcelUtils.getValue(1, 4);
+        System.out.println(expectedResult);
+        String[] results=expectedResult.split("\n");
+
+
+        Assert.assertEquals(results[1], orderPage.productLabel.getText());
+        Assert.assertEquals(results[2], orderPage.quantityLabel.getText());
+        Assert.assertEquals(results[3], orderPage.pricePerUnitLabel.getText());
+        Assert.assertEquals(results[4], orderPage.discountLabel.getText());
+        Assert.assertEquals(results[5], orderPage.totalLabel.getText());
+    }
+    @Then("User updates {string} with {string}")
+    public void user_updates_with(String string, String string2) {
+
+        ExcelUtils.setValue(1,6,string2);
     }
 
 
