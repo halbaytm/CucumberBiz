@@ -34,7 +34,8 @@ public class WebOrdersAppSteps {
 
     @When("User provides username {string} and password {string}")
     public void user_provides_username_and_password(String username, String password) {
-        webOrdersLoginPage.logIn(CommonUtils.getProperty("username"), CommonUtils.getProperty("password"));
+        //webOrdersLoginPage.logIn(CommonUtils.getProperty("username"), CommonUtils.getProperty("password"));
+        webOrdersLoginPage.logIn(username, password);
     }
 
     @Then("User validates that application {string} logged in")
