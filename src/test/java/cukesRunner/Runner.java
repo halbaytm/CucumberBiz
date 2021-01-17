@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt"},
         features = "src/test/resources",
         glue = "stepDefinition",
-        tags = "@TEC-1001",
+        tags = "@regressiontest",
         dryRun = false
 )
 
