@@ -6,5 +6,5 @@ Feature: Validating Headers
     Given User navigates to WebOrders application
     When User provides username "username" and password "password"
     And User click on Order part
-    Then User validates UI headers with "TestCases" excel file expected result
+    Then User validates UI headers with "TestCasesBiz" excel file expected result
     And User updates "TestCasesBiz" with "PASS"

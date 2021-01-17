@@ -4,6 +4,8 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.omg.CORBA.TIMEOUT;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import utilities.CommonUtils;
 import utilities.Driver;
@@ -26,10 +28,12 @@ public class Hooks {
     @After
     public  void tearDown(Scenario scenario) throws IOException {
         if (scenario.isFailed()) {
-            CommonUtils.takeScreenshot(driver, "Test Scenario");
+            //   CommonUtils.takeScreenshot(driver, "Test Scenario");
+            byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            scenario.embed(screenshot, "image/png", "Failed part");
+
+
         }
-       // driver.quit();
-
-
+         driver.quit();
     }
 }

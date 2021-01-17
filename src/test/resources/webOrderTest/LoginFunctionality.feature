@@ -11,7 +11,7 @@ Feature: Testing Log in functionality
 
       | username | password | condition |
       | Tester   | test     | is        |
-      | tester   | tester   | is not    |
+      | tester   | tester   | is     |
 
 
 
