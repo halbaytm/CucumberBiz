@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources",
         glue = "stepDefinition",
         tags = "@regressiontest",
-        dryRun = false.
+        dryRun = false
 )
 
 public class Runner {
