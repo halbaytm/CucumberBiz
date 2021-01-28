@@ -12,8 +12,9 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt"},
         features = "src/test/resources",
         glue = "stepDefinition",
-        tags = "@TEC-2015",
+        tags = "@TEC-1020",
         dryRun = false
+        
 )
 
 public class Runner {
